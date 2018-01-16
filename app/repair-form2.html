@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/weui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>智能快修</title>
+</head>
+<body>
+  <section class="repair-form">
+    <form class="" action="wechatpay.html" method="get">
+      <div class="title">手机号</div>
+      <div class="text"><input type="text" placeholder=""></div>
+      <div class="title">所属城市</div>
+      <div class="text">
+        <input type="text" placeholder="北京">
+        <a class="icon-arrow" href="#" id="cityPicker"><i></i></a>
+      </div>
+      <div class="title">所在地区</div>
+      <div class="text">
+        <input type="text" placeholder="朝阳区">
+        <a class="icon-arrow" href="#" id="areaPicker"><i></i></a>
+      </div>
+      <div class="title">详细地址</div>
+      <div class="text">
+        <input type="text" placeholder="输入维修详细地址">
+      </div>
+      <div class="title">设备类型</div>
+      <div class="text">
+        <input type="text" placeholder="摇摇车">
+        <a class="icon-arrow" href="#" id="machinePicker"><i></i></a>
+      </div>
+      <div class="title">故障原因描述</div>
+      <div><textarea name="" id="" cols="30" rows="10"></textarea></div>
+      <div><input type="submit" value="确认报修"></div>
+    </form>   
+  </section>
+   <div class="hover">
+      <div class="notice">
+        <div class="bd">请完善维修信息</div>
+        <div class="ft"><a href="#">好的</a></div>
+      </div>
+    </div>
+  <script src="js/zepto.min.js"></script>
+  <script type="text/javascript">
+    let city = [{
+            label: '北京',
+            value: 0
+        }, {
+            label: '上海',
+            value: 1
+        }, {
+            label: '广州',
+            value: 2
+        }, {
+            label: '深圳(disabled)',
+            disabled: true,
+            value: 3
+        }, {
+            label: '其他',
+            value: 4
+        }],area = [{
+                label: '东城区',
+                value: 0
+            }, {
+                label: '西城区',
+                value: 1
+            }, {
+                label: '朝阳区',
+                value: 2
+            }, {
+                label: '海淀区(disabled)',
+                disabled: true,
+                value: 3
+            }, {
+                label: '其他',
+                value: 4
+            }],machine = [{
+                    label: '摇摇车',
+                    value: 0
+                }, {
+                    label: '扭蛋机',
+                    value: 1
+                }, {
+                    label: '摇摇车',
+                    value: 2
+                }, {
+                    label: '海淀区(disabled)',
+                    disabled: true,
+                    value: 3
+                }, {
+                    label: '其他',
+                    value: 4
+                }]
+    $('#cityPicker').on('click', function() {
+        let me = this
+        weui.picker(city, {
+            onChange: function(result) {
+                console.log(result);
+            },
+            onConfirm: function(result) {
+                $(me).siblings("input").val(city[result[0]].label)
+            }
+        });
+    });
+    $('#areaPicker').on('click', function() {
+        let me = this
+        weui.picker(area, {
+            onChange: function(result) {
+                console.log(result);
+            },
+            onConfirm: function(result) {
+                $(me).siblings("input").val(area[result[0]].label)
+            }
+        });
+    });
+    $('#machinePicker').on('click', function() {
+        let me = this
+        weui.picker(machine, {
+            onChange: function(result) {
+                console.log(result);
+            },
+            onConfirm: function(result) {
+                $(me).siblings("input").val(machine[result[0]].label)
+            }
+        });
+    });
+    </script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+</body>
+</html>

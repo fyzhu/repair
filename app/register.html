@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/weui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>注册</title>
+</head>
+<body>
+  <section class="login-box register">
+		<form action="index.html">
+      <div class="logo"></div>
+			<div class="input">
+				<div class="mobile"><input type="text" placeholder="姓名"></div>
+				<div class="code">
+          <input type="text" placeholder="选择所在城市">
+          <a class="icon-arrow" href="#" id="showPicker1"><i></i></a>
+        </div>
+				<div class="login">
+					<input type="submit" value="确认注册">
+				</div>
+			</div>
+		</form>
+	</section>
+  <script src="js/zepto.min.js"></script>
+  <script type="text/javascript">
+    let nation = [{
+            label: '北京',
+            value: 0
+        }, {
+            label: '上海',
+            value: 1
+        }, {
+            label: '广州',
+            value: 2
+        }, {
+            label: '深圳(disabled)',
+            disabled: true,
+            value: 3
+        }, {
+            label: '其他',
+            value: 4
+        }]
+    $('#showPicker1').on('click', function() {
+        let me = this
+        weui.picker(nation, {
+            onChange: function(result) {
+                console.log(result);
+            },
+            onConfirm: function(result) {
+                // console.log(nation[result[0]].label)
+                $(me).siblings("input").val(nation[result[0]].label)
+                // $(me).children("strong").addClass("result")
+            }
+        });
+    });
+    </script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+</body>
+</html>

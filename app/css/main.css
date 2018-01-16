@@ -1,0 +1,561 @@
+@charset "UTF-8";
+/*
+通用样式
+*/
+html {
+  height: 100%; }
+
+body {
+  background: #fff;
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: #2d2e33; }
+
+a:visited {
+  color: 2d2e33; }
+
+/*
+登录页login.html
+ */
+.login-box {
+  font-family: '黑体';
+  /*padding: 0 40px;*/
+  text-align: center;
+  height: 100%;
+  position: relative; }
+
+.login-box form {
+  height: 100%; }
+
+.login-box .logo {
+  position: absolute;
+  top: 16%;
+  width: 100%; }
+
+.login-box .logo img {
+  width: 100px; }
+
+.login-box .input {
+  width: 100%;
+  position: absolute;
+  top: 24%; }
+
+.login-box .input div {
+  padding: 0 40px; }
+
+.login-box .input div input {
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box; }
+
+.login-box .input .mobile {
+  position: relative; }
+
+.login-box .input .mobile input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  text-indent: 15px;
+  font-size: 15px;
+  color: #23232b; }
+
+.login-box .input .mobile a {
+  position: absolute;
+  right: 49px;
+  top: 7.5px;
+  color: #4e8cf2;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  padding: 4px 9px;
+  border: 1px solid #4e8cf2;
+  border-radius: 5px; }
+
+.login-box .input .code input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  text-indent: 15px;
+  font-size: 15px;
+  color: #23232b;
+  margin-top: 10px; }
+
+.login-box .input .login input {
+  color: #fff;
+  border: 1px solid #4e8cf2;
+  background: #4e8cf2;
+  margin-top: 35px;
+  font-size: 15px; }
+
+.login-box .tips {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  width: 139px;
+  height: 43px;
+  line-height: 43px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateX(-50%) translateY(-50%); }
+
+.register.login-box .input .mobile {
+  padding: 0 47px; }
+  .register.login-box .input .mobile input {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0; }
+
+.register.login-box .input .code {
+  padding: 0 47px;
+  position: relative; }
+  .register.login-box .input .code input {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0; }
+  .register.login-box .input .code a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 63px;
+    background: url(../images/arrow.png) right center no-repeat;
+    background-size: 7.5px 13px; }
+
+.smart-repair {
+  color: #2d2e33;
+  height: 100%;
+  background: #f0f0f0;
+  text-align: center; }
+  .smart-repair > div {
+    height: 222px;
+    width: 100%;
+    background: #fff; }
+    .smart-repair > div i {
+      width: 76.5px;
+      height: 76.5px;
+      border-radius: 50%;
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 45px; }
+    .smart-repair > div span {
+      position: relative;
+      top: 67px; }
+  .smart-repair > div:first-child i {
+    background: #4e81f2 url(../images/repair.png) center no-repeat;
+    background-size: 40px 40px; }
+  .smart-repair > div:last-child {
+    margin-top: 10px; }
+    .smart-repair > div:last-child i {
+      background: #ff7736 url(../images/order.png) center no-repeat;
+      background-size: 32px 35px; }
+
+.repair-form {
+  height: 100%;
+  position: relative;
+  padding: 0 20px; }
+  .repair-form form {
+    margin-bottom: 64px; }
+    .repair-form form .title {
+      margin-top: 23px;
+      font-size: 15px;
+      color: #2d2e33;
+      margin-bottom: 12px;
+      font-family: microsoft yahei; }
+    .repair-form form .text {
+      position: relative; }
+      .repair-form form .text input {
+        width: 100%;
+        border: 1px solid #cacaca;
+        height: 38px;
+        font-size: 15px;
+        padding: 11.5px 15px;
+        box-sizing: border-box;
+        border-radius: 5px; }
+      .repair-form form .text a {
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin-right: 15px;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        background: url(../images/arrow.png) no-repeat;
+        background-size: 7.5px 13px;
+        background-position: right center; }
+    .repair-form form textarea {
+      border: 1px solid #cacaca;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box; }
+    .repair-form form div:last-child {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12.5px 32px;
+      border-top: 1px solid #f1f0f1;
+      background: #fff; }
+      .repair-form form div:last-child input {
+        width: 100%;
+        background: #4b82f5;
+        border: 0;
+        height: 39px;
+        line-height: 39px;
+        color: #fff;
+        font-size: 15px; }
+
+.hover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); }
+  .hover .notice {
+    width: 280px;
+    background: #fff;
+    height: 145px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 4px; }
+    .hover .notice .bd {
+      font-size: 18px;
+      color: #000;
+      padding-top: 40px;
+      line-height: 18px;
+      padding-bottom: 37px;
+      border-bottom: 1px solid #d2d3d5; }
+    .hover .notice .ft a {
+      color: #4b82f5;
+      font-size: 18px;
+      padding-top: 16px;
+      line-height: 18px;
+      display: block; }
+
+.hover2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); }
+  .hover2 .notice {
+    width: 280px;
+    background: #fff;
+    height: 145px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 4px; }
+    .hover2 .notice .bd {
+      font-size: 18px;
+      color: #000;
+      padding-top: 40px;
+      line-height: 18px;
+      padding-bottom: 37px;
+      border-bottom: 1px solid #d2d3d5; }
+    .hover2 .notice .ft a {
+      height: 48px;
+      width: 49%;
+      float: left;
+      color: #4b82f5;
+      font-size: 18px;
+      line-height: 48px;
+      display: block; }
+    .hover2 .notice .ft a:first-child {
+      color: #000;
+      border-right: 1px solid #d2d3d5; }
+
+.wechatpay {
+  height: 100%;
+  background: #f0f0f0; }
+  .wechatpay .detail-head {
+    padding: 0 20px;
+    background: #fff;
+    margin-bottom: 15px; }
+    .wechatpay .detail-head div {
+      display: flex;
+      justify-content: space-between;
+      height: 25px;
+      line-height: 25px;
+      padding-top: 17px;
+      padding-bottom: 13px; }
+      .wechatpay .detail-head div .fee {
+        font-size: 18px;
+        color: #2d2e33; }
+      .wechatpay .detail-head div .money {
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 25px; }
+    .wechatpay .detail-head > span {
+      font-size: 12px;
+      padding-bottom: 9px;
+      line-height: 1;
+      display: block; }
+  .wechatpay .detail-content {
+    background: #fff; }
+    .wechatpay .detail-content div {
+      padding: 0 20px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between; }
+      .wechatpay .detail-content div .address {
+        font-size: 12px; }
+    .wechatpay .detail-content div + div {
+      border-top: 1px solid #efeff4; }
+  .wechatpay > a {
+    display: block;
+    text-align: center;
+    margin: 54px 25px 0;
+    background: #0fcf46;
+    color: #fff;
+    border-radius: 4px;
+    height: 39px;
+    line-height: 39px; }
+
+.pay-result {
+  height: 100%;
+  background: #4e8cf2;
+  padding-top: 15px; }
+  .pay-result > div {
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 37px 19px 14px;
+    text-align: center; }
+    .pay-result > div img {
+      width: 35px; }
+    .pay-result > div .order-num {
+      font-size: 18px;
+      text-align: left;
+      margin-top: 48px;
+      margin-bottom: 15px;
+      color: #2d2e33; }
+    .pay-result > div .tips {
+      text-align: left;
+      font-size: 15px;
+      line-height: 18px;
+      color: #2d2e33;
+      margin-bottom: 20px; }
+    .pay-result > div > a {
+      display: block;
+      height: 42px;
+      line-height: 42px;
+      border: 1px solid #4e8cf2;
+      color: #4e8cf2;
+      margin: 0 72px;
+      border-radius: 3px;
+      font-size: 18px; }
+
+.order-list {
+  height: 100%;
+  background: #f0f0f0; }
+  .order-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px; }
+    .order-list ul li {
+      padding: 16px 19px;
+      background: #fff;
+      margin-bottom: 12px;
+      font-size: 15px; }
+      .order-list ul li div {
+        display: flex;
+        justify-content: space-between; }
+        .order-list ul li div span:first-child {
+          color: #23272f; }
+        .order-list ul li div .date {
+          color: #6f7174;
+          font-size: 11px; }
+        .order-list ul li div .finished {
+          color: #666; }
+        .order-list ul li div .notfinished {
+          color: #4e8cf2; }
+        .order-list ul li div a {
+          width: 59px;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          display: block;
+          border: 1px solid #4e8cf2;
+          color: #4e8cf2;
+          border-radius: 5px; }
+      .order-list ul li div + div {
+        margin-top: 18px; }
+
+.order-detail {
+  height: 100%;
+  background: #f0f0f0; }
+  .order-detail > div {
+    margin-bottom: 7.5px;
+    background: #fff;
+    padding: 0 20px;
+    color: #23272f; }
+  .order-detail .detail-head {
+    height: 36px;
+    line-height: 36px;
+    display: flex;
+    justify-content: space-between; }
+    .order-detail .detail-head .order-num {
+      font-size: 15px; }
+    .order-detail .detail-head .time {
+      font-size: 11px;
+      color: #6f7174; }
+  .order-detail .my-info {
+    padding-bottom: 15px; }
+    .order-detail .my-info .myinfo-head {
+      width: 100%;
+      margin-left: -20px;
+      padding: 0 20px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+      border-bottom: 1px solid #efeff4; }
+    .order-detail .my-info .myinfo-content {
+      padding-top: 12px; }
+      .order-detail .my-info .myinfo-content div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        line-height: 30px; }
+    .order-detail .my-info .repair-detail {
+      margin-top: 18px;
+      background: #f6f6f6;
+      padding: 9px 7px; }
+      .order-detail .my-info .repair-detail div {
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        line-height: 20px; }
+        .order-detail .my-info .repair-detail div span:first-child {
+          font-size: 12px; }
+        .order-detail .my-info .repair-detail div span:last-child {
+          font-size: 10px;
+          color: #6f7174; }
+      .order-detail .my-info .repair-detail img {
+        width: 20px;
+        margin-right: 10px; }
+  .order-detail .order-status {
+    padding-top: 15px;
+    padding-bottom: 11px; }
+    .order-detail .order-status div:first-child {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      line-height: 15px; }
+      .order-detail .order-status div:first-child span:last-child {
+        color: #4e8cf2; }
+        .order-detail .order-status div:first-child span:last-child a {
+          display: block;
+          width: 59px;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          border: 1px solid #4e8cf2;
+          color: #4e8cf2;
+          border-radius: 5px;
+          margin-top: -5px; }
+    .order-detail .order-status > span {
+      font-size: 11px;
+      color: #6f7174;
+      line-height: 11px;
+      margin-top: 9px;
+      display: block; }
+    .order-detail .order-status div.btn {
+      display: flex;
+      justify-content: flex-end; }
+      .order-detail .order-status div.btn a {
+        height: 24px;
+        width: 59px;
+        display: block;
+        border: 1px solid #3e3922;
+        text-align: center;
+        line-height: 24px;
+        margin-left: 16px;
+        border-radius: 5px;
+        color: #6b6d72;
+        font-size: 15px; }
+      .order-detail .order-status div.btn a:last-child {
+        color: #4e8cf2;
+        border-color: #4e8cf2; }
+    .order-detail .order-status div.time {
+      margin-top: 13px;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #23272f; }
+      .order-detail .order-status div.time span:last-child {
+        color: #6f7174; }
+
+.apply-refund {
+  height: 100%;
+  background: #f0f0f0;
+  padding: 0 18px; }
+  .apply-refund .title {
+    padding-top: 25px;
+    font-size: 17px;
+    color: #202122;
+    padding-bottom: 15px; }
+  .apply-refund textarea {
+    width: 100%;
+    border-radius: 5px; }
+  .apply-refund a {
+    margin: 31px 80px 0;
+    text-align: center;
+    background: #4e8cf2;
+    color: #fff;
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 5px; }
+  .apply-refund span {
+    text-align: center;
+    display: block;
+    font-size: 11px;
+    margin-top: 12px; }
+
+.apply-success {
+  height: 100%;
+  background: #f0f0f0;
+  text-align: center; }
+  .apply-success img {
+    padding-top: 49px;
+    padding-bottom: 29px;
+    width: 96.5px; }
+  .apply-success .title {
+    font-size: 19px;
+    padding-bottom: 20px; }
+  .apply-success .tips {
+    font-size: 13px;
+    color: #888;
+    line-height: 19px;
+    padding: 0 19px;
+    margin-bottom: 35px; }
+  .apply-success a {
+    display: block;
+    background: #faf9fb;
+    height: 41px;
+    line-height: 41px;
+    font-size: 17px;
+    color: #000;
+    margin: 0 20px;
+    border-radius: 5px;
+    border: 1px solid #dad9da; }
