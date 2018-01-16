@@ -15,7 +15,7 @@ a {
   color: #2d2e33; }
 
 a:visited {
-  color: 2d2e33; }
+  color: #2d2e33; }
 
 /*
 登录页login.html
@@ -124,9 +124,10 @@ a:visited {
     width: 100%;
     height: 100%;
     top: 0;
-    right: 63px;
+    right: 0;
     background: url(../images/arrow.png) right center no-repeat;
-    background-size: 7.5px 13px; }
+    background-size: 7.5px 13px;
+    background-position-x: 85%; }
 
 .smart-repair {
   color: #2d2e33;
@@ -137,6 +138,9 @@ a:visited {
     height: 222px;
     width: 100%;
     background: #fff; }
+    .smart-repair > div a {
+      display: block;
+      height: 100%; }
     .smart-repair > div i {
       width: 76.5px;
       height: 76.5px;
@@ -184,18 +188,20 @@ a:visited {
         display: block;
         position: absolute;
         width: 100%;
-        margin-right: 15px;
+        /*margin-right: 15px;*/
         height: 100%;
         top: 0px;
         right: 0px;
         background: url(../images/arrow.png) no-repeat;
         background-size: 7.5px 13px;
-        background-position: right center; }
+        background-position: 95% center; }
     .repair-form form textarea {
       border: 1px solid #cacaca;
       border-radius: 5px;
       width: 100%;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      padding: 15px;
+      line-height: 1.5; }
     .repair-form form div:last-child {
       position: fixed;
       bottom: 0;
@@ -309,13 +315,17 @@ a:visited {
     background: #fff; }
     .wechatpay .detail-content div {
       padding: 0 20px;
-      height: 50px;
+      min-height: 50px;
       line-height: 50px;
       font-size: 15px;
       display: flex;
       justify-content: space-between; }
       .wechatpay .detail-content div .address {
         font-size: 12px; }
+    .wechatpay .detail-content :last-child span:last-child {
+      max-width: 70%;
+      padding: 14px 0;
+      line-height: 24px; }
     .wechatpay .detail-content div + div {
       border-top: 1px solid #efeff4; }
   .wechatpay > a {
@@ -434,6 +444,9 @@ a:visited {
         justify-content: space-between;
         font-size: 15px;
         line-height: 30px; }
+        .order-detail .my-info .myinfo-content div span + span {
+          width: 80%;
+          text-align: right; }
     .order-detail .my-info .repair-detail {
       margin-top: 18px;
       background: #f6f6f6;
