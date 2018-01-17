@@ -16,16 +16,16 @@
       <div class="text"><input type="text" placeholder="输入真实姓名"></div>
       <div class="title">手机号</div>
       <div class="text"><input type="text" placeholder="请输入手机号"></div>
-      <div class="title">所属城市</div>
+      <div class="title">选择城市</div>
       <div class="text">
-        <input type="text" placeholder="北京">
+        <input type="text" placeholder="北京，北京市，昌平区">
         <a class="icon-arrow" href="#" id="cityPicker"><i></i></a>
       </div>
-      <div class="title">所在地区</div>
+      <!-- <div class="title">所在地区</div>
       <div class="text">
         <input type="text" placeholder="朝阳区">
         <a class="icon-arrow" href="#" id="areaPicker"><i></i></a>
-      </div>
+      </div> -->
       <div class="title">详细地址</div>
       <div class="text">
         <input type="text" placeholder="输入维修详细地址">
@@ -42,23 +42,55 @@
   </section>
   <script src="js/zepto.min.js"></script>
   <script type="text/javascript">
-    let city = [{
-            label: '北京',
-            value: 0
-        }, {
-            label: '上海',
-            value: 1
-        }, {
-            label: '广州',
-            value: 2
-        }, {
-            label: '深圳(disabled)',
-            disabled: true,
-            value: 3
-        }, {
-            label: '其他',
-            value: 4
-        }],area = [{
+    let city =  [{
+                    label: '广东',
+                    value: 0,
+                    children: [{
+                        label: '广州',
+                        value: 0,
+                        children: [{
+                            label: '海珠',
+                            value: 0
+                        }, {
+                            label: '番禺',
+                            value: 1
+                        }]
+                    }, {
+                        label: '佛山',
+                        value: 1,
+                        children: [{
+                            label: '禅城',
+                            value: 0
+                        }, {
+                            label: '南海',
+                            value: 1
+                        }]
+                    }]
+                }, {
+                    label: '广西',
+                    value: 1,
+                    children: [{
+                        label: '南宁',
+                        value: 0,
+                        children: [{
+                            label: '青秀',
+                            value: 0
+                        }, {
+                            label: '兴宁',
+                            value: 1
+                        }]
+                    }, {
+                        label: '桂林',
+                        value: 1,
+                        children: [{
+                            label: '象山',
+                            value: 0
+                        }, {
+                            label: '秀峰',
+                            value: 1
+                        }]
+                    }]
+                }],area = [{
                 label: '东城区',
                 value: 0
             }, {
@@ -98,7 +130,7 @@
                 console.log(result);
             },
             onConfirm: function(result) {
-                $(me).siblings("input").val(city[result[0]].label)
+                $(me).siblings("input").val(city[result[0]].label+"，"+city[result[0]].children[result[1]].label+"，"+city[result[0]].children[result[1]].children[result[2]].label)
             }
         });
     });
